@@ -64,3 +64,25 @@
 
 （2）使用SpringBoot进行Web开发
 
+
+
+##### 7、Web开发
+
+默认是resources文件夹下都是静态文件，可以在yaml文件中进行相关访问的设置
+
+
+
+静态资源配置原理(底层)
+
+雷神讲课会分析源码，比较难理解
+
+
+
+请求映射使用@RequestMapping注解， 通过请求地址来处理请求。
+
+使用请求方式来区分这些请求。
+
+
+
+Spring Boot的底层还是用到Spring MVC,即DispatcherServlet
+
