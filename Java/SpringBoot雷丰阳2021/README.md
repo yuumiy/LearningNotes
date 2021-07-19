@@ -86,3 +86,31 @@
 
 Spring Boot的底层还是用到Spring MVC,即DispatcherServlet
 
+请求映射原理解析
+
+
+
+@RequestAttribute注解，获取到request中的值
+
+<img src="images/1626698020581.png" alt="1626698020581" style="zoom: 80%;" />
+
+@MatrixVarible  矩阵变量
+
+
+
+##### 8、各种类型参数解析方法
+
+map、model里的数据会被放到request请求域中，都相当于给request放数据
+
+
+
+自定义对象参数的封装过程和原理
+
+@GetMapping   @PostMapping
+
+
+
+自定义数据绑定的原理
+
+自定义Converter原理
+
