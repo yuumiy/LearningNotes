@@ -114,3 +114,29 @@ map、model里的数据会被放到request请求域中，都相当于给request�
 
 自定义Converter原理
 
+
+
+##### 9、ModelAndView 返回视图对象
+
+##### 10、MessageConverter的原理
+
+通过MessageConverter把对象转为JSON
+
+内容协商：找到合适的Converter处理这个对象，转换成JSON输出
+
+![1626787131809](images/1626787131809.png)
+
+
+
+**基于请求头的内容协商原理**
+
+使用postman可以很好的定义请求头
+
+
+
+**基于请求参数的内容协商原理**
+
+
+
+允许自定义内容协商管理器
+
