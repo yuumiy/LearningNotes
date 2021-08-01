@@ -38,7 +38,37 @@ Eureka7001、Eureka7002，修改映射host文件。服务端的实例名称需�
 
 
 
+Eureka自我保护：某时刻一个微服务不可用，Eureka不会立刻清理，依旧会对该微服务信息进行保存。防止因网络故障，导致误删除微服务
+
+关闭自我保护，微服务故障，立即删除微服务
 
 
 
+### 3、Zookeeper服务注册中心
+
+SpringCloud整合Zookeeper替代Eureka
+
+Zookeeper服务提供者加上@EnableDiscoveryClient注解
+
+@RequestMapping url地址请求访问
+
+zookeeper是临时节点
+
+
+
+public static final String 进行常量命名，变量名为大写
+
+
+
+### 4、Consul服务注册中心
+
+服务提供者、消费者注册进consul
+
+CAP
+
+C：强一致性   A：可用性   P：分区容错性
+
+AP(Eureka)   淘宝首先保证高可用性，而不是强一致性
+
+ZP(Zookeeper/Consul)
 
