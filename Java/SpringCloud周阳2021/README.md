@@ -72,3 +72,8 @@ AP(Eureka)   淘宝首先保证高可用性，而不是强一致性
 
 ZP(Zookeeper/Consul)
 
+
+
+### 5、Ribbon负载均衡
+
+Ribbon=负载均衡+RestTemplate
