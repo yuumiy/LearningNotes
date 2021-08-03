@@ -77,3 +77,40 @@ ZP(Zookeeper/Consul)
 ### 5、Ribbon负载均衡
 
 Ribbon=负载均衡+RestTemplate
+
+轮询负载均衡算法原理：次数取模   CAS+自旋锁
+
+
+
+### 6、OpenFeign服务调用
+
+![image-20210803165029575](images/image-20210803165029575.png)
+
+
+
+Feign已被OpenFeign取代
+
+OpenFeign=接口+注解
+
+@EnableFeignClient  激活并开启服务调用    在业务类接口上还要加FeignClient注解
+
+
+
+OpenFeign根据业务设置超时时间，默认处理业务的时间是1s。超过处理时间就会报错
+
+OpenFeign日志打印功能，打印debug级别日志，日志非常详细
+
+
+
+### 7、Hystrix服务降级
+
+多个微服务之间调用，如果某个服务出现问题，就会发生服务雪崩
+
+![image-20210803172044575](images/image-20210803172044575.png)
+
+作用：服务降低、服务熔断、接近实时的监控
+
+
+
+
+
