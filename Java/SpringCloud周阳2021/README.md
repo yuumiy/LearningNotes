@@ -178,6 +178,34 @@ GateWay的Filter过滤器：全局日志、统一网关
 
 
 
+### 9、Config配置中心
+
+基于分布式的微服务架构
+
+配置中心的三种实现？
+
+config+bus
+
+nacos
+
+apolo
+
+
+
+配置中心推荐跟github整合，可以通过github修改配置文件
+
+
+
+bootstrap.yml
+
+![image-20210804143042618](images/image-20210804143042618.png)
+
+
+
+Config客户端之动态刷新
+
+github修改配置文件+发送post请求刷新 ————可以避免重启
+
 
 
 
