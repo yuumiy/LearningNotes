@@ -410,3 +410,59 @@ Sentinel整合Ribbon+OpenFeign+fallback
 
 
 
+### 14、分布式事务Seata
+
+<img src="images/image-20210805183331907.png" alt="image-20210805183331907" style="zoom: 67%;" />
+
+
+
+Seata是一款开源的分布式事务解决方案，致力于在微服务架构下提供高性能和简单易用的分布式事务服务
+
+<img src="images/image-20210805183920307.png" alt="image-20210805183920307" style="zoom:67%;" />
+
+
+
+<img src="images/image-20210805184059620.png" alt="image-20210805184059620" style="zoom:67%;" />
+
+
+
+将seata的file改为db，将数据存到数据库中
+
+
+
+Seata业务数据库准备：
+
+<img src="images/image-20210805185610313.png" alt="image-20210805185610313" style="zoom:50%;" />
+
+三个库分别建各自的回滚记录表
+
+
+
+下订单->减库存->扣余额->改状态              订单、库存、余额三个数据库
+
+
+
+Seata原理：
+
+简单可扩展自制事务框架
+
+
+
+seata默认使用的是AT模式
+
+<img src="images/image-20210805201428941.png" alt="image-20210805201428941" style="zoom: 67%;" />
+
+
+
+seata分布式事务管理多个数据库之间的数据交互，保证一致性
+
+
+
+
+
+### 15、雪花算法
+
+雪花算法生成全局唯一ID
+
+![image-20210805202044573](images/image-20210805202044573.png)
+
