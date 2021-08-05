@@ -278,7 +278,7 @@ zipkin监控平台
 
 
 
-#### (1)Nacos服务注册与配置中心
+#### (1)Nacos服务注册中心
 
 Nacos=Eureka+Config+Bus
 
@@ -287,4 +287,40 @@ Nacos=Eureka+Config+Bus
 学会查找官方文档学习，官方文档的含金量很高
 
 
+
+微服务的提供者和消费者注册进Nacos
+
+Nacos支持AP和CP模式的切换
+
+
+
+#### (2)Nacos配置中心
+
+Nacos作为配置中心，配置的动态刷新相比config简洁不少
+
+
+
+Nacos的分类管理：NamaSpace、GroupID、DataID
+
+![image-20210805113941038](images/image-20210805113941038.png)
+
+
+
+不同的组可以有相同的dataid
+
+
+
+**Nacos集群和持久化配置**
+
+Linux版Nacos+MySQL生产环境配置(集群实现高可用)
+
+![image-20210805135120810](images/image-20210805135120810.png)
+
+
+
+搭建集群：1Nginx+3Nacos+1MySQL                    Nacos集群配置
+
+编辑Nacos的启动脚本，使得能够指定端口Nacos启动
+
+ps -ef|grep nginx    查看nginx是否打开
 
