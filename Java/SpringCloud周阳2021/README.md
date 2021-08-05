@@ -324,3 +324,89 @@ Linux版Nacos+MySQL生产环境配置(集群实现高可用)
 
 ps -ef|grep nginx    查看nginx是否打开
 
+
+
+#### (3)Sentinel熔断降级
+
+分布式系统的流量防卫兵
+
+![image-20210805142749089](images/image-20210805142749089.png)
+
+作用：服务雪崩、服务熔断、服务降级、服务限流
+
+
+
+##### Sentinel流控
+
+Sentinel的流控规则：
+
+直接-快速失败    设置1s查询一次即ok，如果快速点击会提示失败
+
+
+
+Sentinel的关联：
+
+B接口挂了(超过Sentinel的流控限制)，A接口就不可用。关联接口，限流。
+
+
+
+Sentinel的限流冷启动：
+
+<img src="images/image-20210805152453705.png" alt="image-20210805152453705" style="zoom: 67%;" />
+
+![image-20210805152829127](images/image-20210805152829127.png)
+
+
+
+流控的排队等待
+
+
+
+##### Sentinel降级规则
+
+Sentinel的断路器是没有半开状态的
+
+降级策略：RT、异常比例、异常数
+
+
+
+Sentinel的异常数：
+
+<img src="images/image-20210805160732030.png" alt="image-20210805160732030" style="zoom:50%;" />
+
+
+
+Sentinel的热点key：
+
+<img src="images/image-20210805163529943.png" alt="image-20210805163529943" style="zoom: 67%;" />
+
+
+
+Sentinel系统规则：
+
+![image-20210805163831989](images/image-20210805163831989.png)
+
+
+
+@SentinelResource注解类：客户自定义限流处理业务逻辑
+
+<img src="images/image-20210805170248302.png" alt="image-20210805170248302" style="zoom:67%;" />
+
+
+
+##### Sentinel服务熔断
+
+Sentinel整合Ribbon+OpenFeign+fallback
+
+![image-20210805172642407](images/image-20210805172642407.png)
+
+
+
+##### sentinel的规则持久化
+
+把sentinel的数据写入nacos中
+
+
+
+
+
